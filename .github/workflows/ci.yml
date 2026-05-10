@@ -1,4 +1,4 @@
-name: CI
+name: Build Upload Release
 
 on:
   workflow_dispatch:
@@ -42,11 +42,13 @@ jobs:
       - name: Build
         run: ./gradlew clean build --no-daemon
 
-      - name: Upload Artifact
+      - name: Upload Jar Artifact
         uses: actions/upload-artifact@v4
         with:
           name: ResidenceBridge-Velocity
           path: build/libs/*.jar
+          if-no-files-found: error
+          retention-days: 14
 
   release:
     if: startsWith(github.ref, 'refs/tags/v')
