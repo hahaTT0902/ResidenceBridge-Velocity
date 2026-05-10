@@ -2,7 +2,7 @@
 
 ResidenceBridge-Velocity is a bridge plugin that runs on the Velocity proxy side.
 
-Chinese version: [README_ZH.md](README_ZH.md)
+中文README: [README_ZH.md](README_ZH.md)
 
 It does not produce gameplay events itself. Its main responsibility is to receive plugin messages sent from the Paper side and forward players to the target sub-server.
 
