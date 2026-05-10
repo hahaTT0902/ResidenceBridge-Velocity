@@ -1,6 +1,7 @@
 name: CI
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -11,6 +12,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    concurrency:
+      group: ci-${{ github.ref }}
+      cancel-in-progress: true
 
     steps:
       - name: Checkout

@@ -1,15 +1,26 @@
-.gradle
-.idea
-build
-.kotlin
-bin
+# Build outputs
+build/
+bin/
+out/
 
-### VSCode ###
-.vscode
+# Gradle
+.gradle/
 
-### Claude Code ###
-.claude
+# Kotlin
+.kotlin/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# AI tooling
+.claude/
 .claude.local.md
+.cursor/
 
-### Cursor ###
-.cursor
+# OS files
+.DS_Store
+Thumbs.db
