@@ -81,6 +81,25 @@ build.gradle.kts        构建脚本
 - CI: Push/PR 自动构建
 - 提交前建议执行: `./gradlew clean build`
 
+## 自动发布
+
+仓库已支持按标签自动发布 GitHub Release 并上传插件 jar。
+
+发布步骤:
+
+1. 确保 `main` 分支代码已就绪并已推送。
+2. 创建并推送版本标签 (建议格式 `vX.Y.Z`)。
+
+```bash
+git tag v1.0.1
+git push origin v1.0.1
+```
+
+3. GitHub Actions 会自动:
+	- 执行构建
+	- 创建 Release
+	- 上传 `build/libs` 生成的 jar 文件
+
 详情可见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 许可证
