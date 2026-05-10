@@ -2,6 +2,8 @@
 
 ResidenceBridge-Velocity 是一个运行在 Velocity 代理端的桥接插件。
 
+English version: [README_EN.md](README_EN.md)
+
 它本身不产生业务事件, 主要负责接收 Paper 端发送的插件消息并将玩家转发到目标子服。
 
 ## 重要说明
